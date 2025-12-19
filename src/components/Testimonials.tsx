@@ -1,4 +1,4 @@
-import { Star, Quote } from 'lucide-react';
+import { Star } from 'lucide-react';
 
 const testimonials = [
   {
@@ -6,7 +6,7 @@ const testimonials = [
     role: 'VP of Marketing',
     company: 'TechFlow Solutions',
     rating: 5,
-    text: 'WebAIAutomations transformed our content strategy. We went from 10 posts a month to 40+, with zero additional workload. The ROI is incredible.'
+    text: 'WebAI Automations transformed our content strategy. We went from 10 posts a month to 40+, with zero additional workload. The ROI is incredible.'
   },
   {
     name: 'Michael Chen',
@@ -33,47 +33,45 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-yellow-200/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-cyan-400/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '3s' }}></div>
-      </div>
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
-            Client <span className="bg-gradient-to-r from-cyan-300 via-blue-300 to-yellow-200 bg-clip-text text-transparent">Testimonials</span>
+    <section className="py-20 px-4 bg-[#0F0F0F]">
+      <div className="max-w-[1200px] mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            What Our <span className="text-[#00D9FF]">Clients Say</span>
           </h2>
-          <p className="text-cyan-200/80 text-base">Trusted by leading B2B companies</p>
+          <p className="text-[#CCCCCC] text-lg">
+            Trusted by leading B2B companies worldwide
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="relative p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-cyan-400/30 hover:border-blue-400/50 transition-all"
+              className="relative p-8 rounded-xl bg-[#0F0F0F] border border-[#1A1A2E] border-l-4 border-l-[#00D9FF] hover:border-[#00D9FF]/30 transition-all duration-300 group"
+              style={{
+                animation: `float 6s ease-in-out infinite`,
+                animationDelay: `${index * 0.3}s`
+              }}
+              data-testid={`card-testimonial-${index}`}
             >
-              <Quote className="absolute top-4 right-4 text-white/20" size={32} />
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(testimonial.rating)].map((_, i) => (
+                  <Star key={i} className="text-[#00D9FF] fill-[#00D9FF]" size={16} />
+                ))}
+              </div>
 
-              <div className="relative">
-                <div className="flex items-center gap-1 mb-3">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="text-yellow-400 fill-yellow-400" size={14} />
-                  ))}
+              <p className="text-white text-base leading-relaxed mb-6">
+                "{testimonial.text}"
+              </p>
+
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#00D9FF] via-[#0088FF] to-[#7C3AED] flex items-center justify-center text-black font-bold text-lg">
+                  {testimonial.name.charAt(0)}
                 </div>
-
-                <p className="text-cyan-100 mb-4 leading-relaxed text-sm">
-                  "{testimonial.text}"
-                </p>
-
-                <div className="flex items-center gap-2">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 via-blue-400 to-yellow-300 flex items-center justify-center text-black font-bold text-base">
-                    {testimonial.name.charAt(0)}
-                  </div>
-                  <div>
-                    <div className="text-white font-semibold text-sm">{testimonial.name}</div>
-                    <div className="text-cyan-200/80 text-xs">{testimonial.role}, {testimonial.company}</div>
-                  </div>
+                <div>
+                  <div className="text-white font-semibold">{testimonial.name}</div>
+                  <div className="text-[#999999] text-sm">{testimonial.role}, {testimonial.company}</div>
                 </div>
               </div>
             </div>

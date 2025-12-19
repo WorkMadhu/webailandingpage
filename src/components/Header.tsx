@@ -1,42 +1,90 @@
 import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-lg border-b border-cyan-400/20 shadow-sm shadow-cyan-500/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center gap-8">
-            <Link to="/" className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-yellow-200 bg-clip-text text-transparent">
-              WebAIAutomations
-            </Link>
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 h-[70px] transition-all duration-300 ${
+        scrolled ? 'bg-[#0F0F0F]/95 backdrop-blur-md' : 'bg-transparent'
+      }`}
+      data-testid="header-main"
+    >
+      <div className="max-w-[1200px] mx-auto px-10 h-full">
+        <div className="flex items-center justify-between h-full">
+          <Link 
+            to="/" 
+            className="text-xl font-bold text-white tracking-tight"
+            data-testid="link-logo"
+          >
+            WebAI Automations
+          </Link>
 
-            <nav className="hidden md:flex items-center gap-6">
-              <a href="#solutions" className="text-sm text-cyan-200 hover:text-cyan-100 transition-colors">Solutions</a>
-              <a href="#products" className="text-sm text-cyan-200 hover:text-cyan-100 transition-colors">Products</a>
-              <a href="#company" className="text-sm text-cyan-200 hover:text-cyan-100 transition-colors">Company</a>
-              <a href="#resources" className="text-sm text-cyan-200 hover:text-cyan-100 transition-colors">Resources</a>
-            </nav>
-          </div>
+          <nav className="hidden md:flex items-center gap-8">
+            <a 
+              href="#platform" 
+              className="text-sm text-[#CCCCCC] hover:text-white transition-colors"
+              data-testid="link-platform"
+            >
+              Platform
+            </a>
+            <a 
+              href="#solutions" 
+              className="text-sm text-[#CCCCCC] hover:text-white transition-colors"
+              data-testid="link-solutions"
+            >
+              Solutions
+            </a>
+            <a 
+              href="#customers" 
+              className="text-sm text-[#CCCCCC] hover:text-white transition-colors"
+              data-testid="link-customers"
+            >
+              Customers
+            </a>
+            <a 
+              href="#resources" 
+              className="text-sm text-[#CCCCCC] hover:text-white transition-colors"
+              data-testid="link-resources"
+            >
+              Resources
+            </a>
+            <a 
+              href="#company" 
+              className="text-sm text-[#CCCCCC] hover:text-white transition-colors"
+              data-testid="link-company"
+            >
+              Company
+            </a>
+          </nav>
 
-          <div className="hidden md:flex items-center gap-3">
-            <button className="px-4 py-2 text-sm text-cyan-200 hover:text-cyan-100 transition-colors">
-              Activate Kit
-            </button>
-            <button className="px-4 py-2 text-sm bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-400 text-black rounded-lg hover:shadow-lg hover:shadow-cyan-400/50 transition-all font-semibold">
-              Contact Us
-            </button>
-            <button className="px-4 py-2 text-sm text-cyan-200 hover:text-cyan-100 transition-colors">
-              Sign In
-            </button>
+          <div className="hidden md:flex items-center">
+            <a
+              href="https://cal.com/anabless-dela-cruz-knutxw/consultation"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-2.5 text-sm font-medium text-white border border-white/30 rounded-full hover:bg-white hover:text-black transition-all duration-300"
+              data-testid="button-contact-sales"
+            >
+              Contact Sales
+            </a>
           </div>
 
           <button
-            className="md:hidden text-cyan-400"
+            className="md:hidden text-white"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            data-testid="button-mobile-menu"
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -44,16 +92,23 @@ export default function Header() {
       </div>
 
       {mobileMenuOpen && (
-        <div className="md:hidden bg-black/95 border-t border-cyan-400/20">
-          <nav className="flex flex-col px-4 py-4 gap-3">
-            <a href="#solutions" className="text-sm text-cyan-200 hover:text-cyan-100 py-2">Solutions</a>
-            <a href="#products" className="text-sm text-cyan-200 hover:text-cyan-100 py-2">Products</a>
-            <a href="#company" className="text-sm text-cyan-200 hover:text-cyan-100 py-2">Company</a>
-            <a href="#resources" className="text-sm text-cyan-200 hover:text-cyan-100 py-2">Resources</a>
-            <div className="flex flex-col gap-2 mt-4">
-              <button className="px-4 py-2 text-sm text-cyan-200 hover:text-cyan-100">Activate Kit</button>
-              <button className="px-4 py-2 text-sm bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-400 text-black rounded-lg font-semibold">Contact Us</button>
-              <button className="px-4 py-2 text-sm text-cyan-200 hover:text-cyan-100">Sign In</button>
+        <div className="md:hidden bg-[#0F0F0F]/98 backdrop-blur-md border-t border-[#1A1A2E]">
+          <nav className="flex flex-col px-6 py-6 gap-4">
+            <a href="#platform" className="text-base text-[#CCCCCC] hover:text-white py-2">Platform</a>
+            <a href="#solutions" className="text-base text-[#CCCCCC] hover:text-white py-2">Solutions</a>
+            <a href="#customers" className="text-base text-[#CCCCCC] hover:text-white py-2">Customers</a>
+            <a href="#resources" className="text-base text-[#CCCCCC] hover:text-white py-2">Resources</a>
+            <a href="#company" className="text-base text-[#CCCCCC] hover:text-white py-2">Company</a>
+            <div className="pt-4 border-t border-[#1A1A2E]">
+              <a
+                href="https://cal.com/anabless-dela-cruz-knutxw/consultation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-center px-5 py-3 text-sm font-medium text-white border border-white/30 rounded-full hover:bg-white hover:text-black transition-all"
+                data-testid="button-contact-sales-mobile"
+              >
+                Contact Sales
+              </a>
             </div>
           </nav>
         </div>

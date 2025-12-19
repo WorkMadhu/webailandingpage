@@ -1,138 +1,83 @@
-import { Briefcase, Users, Workflow, Phone, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const projects = [
   {
-    number: 1,
-    icon: Briefcase,
     title: 'Automated Hiring System',
-    description: 'Automation as a Service',
-    link: 'https://www.upwork.com/freelancers/madhutarunsaim?referrer_url_path=/nx/search/talent/details/~0103dfcc01ba6b0369/profile&p=1799103999460208640',
-    borderColor: 'border-gray-600',
-    glowColor: 'shadow-none'
+    company: 'Enterprise SaaS Company',
+    metric: '40+ Hours Saved / Month',
+    description: 'Streamlined candidate screening and onboarding with AI-powered automation, reducing time-to-hire by 60%.',
+    image: 'linear-gradient(135deg, #00D9FF 0%, #0088FF 50%, #7C3AED 100%)',
+    link: 'https://www.upwork.com/freelancers/madhutarunsaim?referrer_url_path=/nx/search/talent/details/~0103dfcc01ba6b0369/profile&p=1799103999460208640'
   },
   {
-    number: 2,
-    icon: Users,
     title: 'Personal Branding on Autopilot',
-    description: '40+ Posts/Month System',
-    link: 'https://www.upwork.com/freelancers/madhutarunsaim?referrer_url_path=/nx/search/talent/details/~0103dfcc01ba6b0369/profile&p=1799165823548141568',
-    borderColor: 'border-blue-500',
-    glowColor: 'shadow-[0_0_30px_rgba(59,130,246,0.4)]'
+    company: 'Growth Partners Inc',
+    metric: '3x Reply Rate',
+    description: '40+ posts per month system that creates studio-quality content and auto-publishes across 14 platforms.',
+    image: 'linear-gradient(135deg, #0088FF 0%, #7C3AED 50%, #00D9FF 100%)',
+    link: 'https://www.upwork.com/freelancers/madhutarunsaim?referrer_url_path=/nx/search/talent/details/~0103dfcc01ba6b0369/profile&p=1799165823548141568'
   },
   {
-    number: 3,
-    icon: Workflow,
-    title: 'Lead Generation & Conversion System',
-    description: 'High-Ticket Automation',
-    link: 'https://www.upwork.com/freelancers/madhutarunsaim?referrer_url_path=/nx/search/talent/details/~0103dfcc01ba6b0369/profile&p=1990911937087201280',
-    borderColor: 'border-gray-600',
-    glowColor: 'shadow-none'
-  },
-  {
-    number: 4,
-    icon: Phone,
-    title: 'AI-Powered Cold Caller',
-    description: '262 Contacts/Minute Capacity',
-    link: 'https://www.upwork.com/freelancers/madhutarunsaim?referrer_url_path=/nx/search/talent/details/~0103dfcc01ba6b0369/profile&p=1798972749193420800',
-    borderColor: 'border-blue-500',
-    glowColor: 'shadow-[0_0_30px_rgba(59,130,246,0.4)]'
+    title: 'Lead Generation System',
+    company: 'NextGen SaaS',
+    metric: '5x Lead Volume',
+    description: 'High-ticket automation system that researches prospects and generates personalized outreach at scale.',
+    image: 'linear-gradient(135deg, #7C3AED 0%, #00D9FF 50%, #0088FF 100%)',
+    link: 'https://www.upwork.com/freelancers/madhutarunsaim?referrer_url_path=/nx/search/talent/details/~0103dfcc01ba6b0369/profile&p=1990911937087201280'
   }
 ];
 
 export default function FeaturedProjects() {
   return (
-    <section id="products" className="py-20 px-4 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 relative overflow-hidden">
-      <div className="absolute inset-0">
-        <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/3 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="max-w-7xl mx-auto relative z-10">
+    <section id="customers" className="py-20 px-4 bg-[#0F0F0F]">
+      <div className="max-w-[1200px] mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-4 tracking-tight">
-            Featured <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-300 bg-clip-text text-transparent">Projects</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Featured <span className="text-[#00D9FF]">Projects</span>
           </h2>
-          <p className="text-gray-400 text-lg font-light">Real results from our automation implementations</p>
+          <p className="text-[#CCCCCC] text-lg">
+            Real results from our automation systems
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-6 relative perspective-1000">
-          <div className="hidden md:block absolute top-8 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent z-0"></div>
-
-          {projects.map((project, index) => {
-            const Icon = project.icon;
-
-            return (
-              <div
-                key={index}
-                className="relative group"
-                style={{
-                  transform: 'translateZ(0)',
-                  transformStyle: 'preserve-3d'
-                }}
+        <div className="grid md:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="group relative rounded-xl overflow-hidden bg-[#1A1A2E] border border-[#1A1A2E] hover:border-[#00D9FF]/30 transition-all duration-500"
+              data-testid={`card-project-${index}`}
+            >
+              <div 
+                className="aspect-video relative overflow-hidden"
+                style={{ background: project.image }}
               >
-                <div
-                  className={`relative p-6 rounded-2xl bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm border-2 ${project.borderColor} ${project.glowColor} transition-all duration-500 h-full flex flex-col`}
-                  style={{
-                    transform: 'rotateX(3deg) rotateY(-3deg)',
-                    transformStyle: 'preserve-3d',
-                    boxShadow: `
-                      0 25px 50px -12px rgba(0, 0, 0, 0.6),
-                      0 15px 30px -10px rgba(0, 0, 0, 0.4),
-                      inset 0 2px 4px rgba(255, 255, 255, 0.1),
-                      ${project.glowColor !== 'shadow-none' ? '0 0 40px rgba(59, 130, 246, 0.3)' : ''}
-                    `
-                  }}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-                  <div
-                    className="absolute -top-5 left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-white text-sm font-bold shadow-lg border-4 border-gray-900 z-10 transition-all duration-500 group-hover:scale-110"
-                    style={{
-                      transform: 'translateZ(30px)',
-                      boxShadow: '0 15px 30px rgba(6, 182, 212, 0.4), 0 8px 16px rgba(59, 130, 246, 0.3), 0 0 20px rgba(59, 130, 246, 0.5)'
-                    }}
-                  >
-                    {project.number}
-                  </div>
-
-                  <div className="mt-6 mb-4 flex-grow">
-                    <div
-                      className="w-16 h-16 rounded-xl bg-gradient-to-br from-cyan-400 via-blue-400 to-yellow-300 flex items-center justify-center mb-6 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
-                      style={{
-                        transform: 'translateZ(40px)',
-                        boxShadow: `
-                          0 20px 40px rgba(6, 182, 212, 0.4),
-                          0 10px 20px rgba(59, 130, 246, 0.3),
-                          inset 0 2px 4px rgba(255, 255, 255, 0.3)
-                        `
-                      }}
-                    >
-                      <Icon className="text-gray-900" size={28} strokeWidth={2.5} />
-                    </div>
-
-                    <h3 className="text-xl font-bold text-white mb-3 relative" style={{ transform: 'translateZ(20px)' }}>
-                      {project.title}
-                    </h3>
-                    <p className="text-gray-400 text-sm leading-relaxed relative" style={{ transform: 'translateZ(10px)' }}>
-                      {project.description}
-                    </p>
-                  </div>
-
-                  <div className="mt-4 relative" style={{ transform: 'translateZ(15px)' }}>
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-black font-bold text-xs py-2.5 px-3 rounded-full transition-all duration-300 hover:scale-105 flex items-center justify-center gap-1.5 shadow-lg hover:shadow-cyan-400/50"
-                    >
-                      Learn More
-                      <ArrowRight size={14} />
-                    </a>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0F0F0F] via-transparent to-transparent"></div>
+                
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="inline-block px-4 py-2 bg-[#00D9FF]/20 backdrop-blur-sm rounded-lg border border-[#00D9FF]/30">
+                    <span className="text-[#00D9FF] font-bold text-lg">{project.metric}</span>
                   </div>
                 </div>
               </div>
-            );
-          })}
+
+              <div className="p-6">
+                <div className="text-[#999999] text-sm mb-2">{project.company}</div>
+                <h3 className="text-xl font-bold text-white mb-3">{project.title}</h3>
+                <p className="text-[#CCCCCC] text-sm leading-relaxed mb-4">{project.description}</p>
+                
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-[#00D9FF] text-sm font-medium hover:gap-3 transition-all"
+                  data-testid={`link-project-${index}`}
+                >
+                  View Case Study
+                  <ArrowRight size={16} />
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

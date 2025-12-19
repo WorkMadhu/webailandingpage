@@ -10,7 +10,7 @@ import CaseStudiesPage from './pages/CaseStudiesPage';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-primary-50 text-navy-900">
+      <div className="min-h-screen bg-[#0F0F0F] text-white">
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />

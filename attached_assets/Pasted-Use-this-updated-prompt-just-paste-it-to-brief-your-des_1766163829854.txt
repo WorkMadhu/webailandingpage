@@ -1,0 +1,224 @@
+Use this updated prompt (just paste it to brief your designer/dev or AI builder):
+
+Prompt: WebAI Automations Landing Page Redesign (with 3D Animations)
+
+Redesign the WebAI Automations landing page in a premium B2B AI style similar to webAI.com, but make it unique to WebAI Automations with cyan branding, 3D motion, and automation‑focused messaging.
+
+1. Overall style
+Dark, minimal, enterprise SaaS look.
+
+Black background, high‑contrast white text, cyan/blue accents.
+
+Modern sans serif typography (Inter/Geist‑like).
+
+Generous whitespace and clean grids.
+
+2. Color palette
+Background: #0F0F0F
+
+Text primary: #FFFFFF
+
+Text secondary: #CCCCCC
+
+Text tertiary: #999999
+
+Accent primary: #00D9FF (cyan)
+
+Accent secondary: #0088FF (electric blue)
+
+Accent tertiary: #7C3AED (purple for gradients)
+
+Borders: #1A1A2E
+
+Use cyan only for CTAs, key highlights, and a few accent words in headlines.
+
+3. Typography
+Single font family, modern sans serif:
+
+H1: 72px desktop / 36px mobile, bold, tight letter spacing.
+
+H2: 48px desktop / 28px mobile, bold.
+
+H3: 24px, semibold.
+
+Body: 16px (14px mobile), regular, line‑height 1.6.
+
+Headlines should be short, benefit‑driven, and can have 1–2 words in cyan.
+
+4. Layout & sections (in order)
+1) Sticky navigation
+
+Black bar, 70px height, fixed on scroll.
+
+Left: “WebAI Automations” logo in white.
+
+Center: links – Platform, Solutions, Customers, Resources, Company.
+
+Right: pill “Contact Sales” button (white outline → fills on hover).
+
+2) Hero (100vh) with 3D animation
+
+Layout: two columns on desktop (stacked on mobile).
+
+Left:
+
+Optional pill badge (“Top Rated Plus - 100% Job Success”).
+
+H1: “Automate Everything. Scale Effortlessly.”
+
+Subheading: 2–3 lines about connecting 40+ tools, automating workflows, and scaling without hiring.
+
+Primary CTA: cyan button “Get Started Free”.
+
+Secondary CTA: outline button “Schedule Demo”.
+
+Right – 3D animated focal element:
+
+A 3D orb / cube / node graph rendered in cyan → blue → purple gradients.
+
+Continuous, subtle motion: slow rotation, gentle floating, soft glow.
+
+Feels like a living “automation engine”: small 3D nodes connected by glowing lines, pulses travelling along the edges to show data/automation flowing.
+
+Motion should be smooth and light, not distracting; think 10–20% of the viewport width, high‑quality WebGL / Lottie / video loop look.
+
+3) Trust metrics (3 KPI cards)
+
+Three metric cards side by side:
+
+Card 1: “3–5x ROI” – “Average return in year 1”.
+
+Card 2: “40+ Integrations” – “Connect all your tools”.
+
+Card 3: “500+ Companies” – “Trusted worldwide”.
+
+Each card:
+
+Dark card with cyan left border, large cyan number, white label, gray description.
+
+Subtle hover effect (border glow, tiny lift).
+
+Optionally add a very soft 3D parallax: cards shift 3–5px with mouse move.
+
+4) Core features (3 cards)
+
+Section title: “Core Features” or “Why WebAI Automations?”.
+
+Three feature cards:
+
+“Automation Studio” – build workflows visually.
+
+“AI‑Powered Workflows” – AI that generates, routes, optimizes steps.
+
+“Enterprise Integration” – secure connections to CRMs, ad platforms, HR, etc.
+
+Each card:
+
+Cyan line icon at the top.
+
+White heading, gray copy.
+
+Hover: cyan glow and light 3D “tilt” (subtle 3D transform on hover).
+
+5) How it works (4‑step flow)
+
+Horizontal flow on desktop, vertical on mobile:
+
+Discovery & Strategy
+
+Build & Automate
+
+Deploy & Optimize
+
+Scale & Support
+
+Each step:
+
+Cyan numbered circle, white title, gray description.
+
+Steps connected by a cyan dashed line.
+
+Add micro 3D motion: the numbered circles have a very light floating animation (2–3px up/down) and a soft glow.
+
+6) Featured projects / case studies (3)
+
+Headline: “Featured Projects”.
+Subheadline: “Real results from our automation systems.”
+
+Three large cards with:
+
+16:9 thumbnail (can be 3D‑ish visuals of dashboards or abstract gradient landscapes).
+
+Overlaid metric: e.g. “3x Reply Rate”, “40+ Hours Saved / Month”, “5x Lead Volume”.
+
+Company name + 2–3 line summary.
+
+“View Case Study” text link.
+
+Cards should have a subtle 3D depth: layered content, box‑shadow, slightly animated gradient on hover.
+
+7) Client logos
+
+Heading: “Trusted by 500+ companies worldwide”.
+
+Row/wrap of 6–8 logos:
+
+Grayscale initially, 70% opacity.
+
+On hover: full color, 100% opacity, tiny scale‑up.
+
+8) Testimonials
+
+Headline: “What Our Clients Say”.
+
+Grid of 3–4 testimonial cards:
+
+5 cyan stars at top.
+
+Short quote in white.
+
+Avatar, name, role, company in gray.
+
+Cyan accent bar on the left of the card.
+
+Cards can gently float 1–2px (very slow 3D depth feel) or tilt slightly on hover.
+
+9) Final CTA
+
+Centered section with soft dark gradient background.
+
+H2: “Ready to Automate?”
+
+Short supporting line (“Join 500+ companies transforming their operations with WebAI Automations.”).
+
+Large cyan button: “Get Started Free”.
+
+Small gray reassurance text under button (“No credit card required - 14‑day free trial”).
+
+5. Spacing & grid
+8px base grid.
+
+Section vertical padding: 80px desktop / 40px mobile.
+
+Max content width: 1200px, centered.
+
+32px gaps between cards / main elements.
+
+40px horizontal padding desktop, 16px on mobile.
+
+6. Interaction & 3D animation rules
+All 3D animations must be smooth, subtle, and lightweight.
+
+Use them to communicate “automation engine / data flow / intelligence”, not as gimmicks.
+
+Keep performance in mind: short loops, optimized assets, reduced motion for low‑end devices.
+
+Provide a “reduced motion” mode where 3D effects are simplified or paused.
+
+7. Responsive behavior
+Mobile: single column, stacked sections, full‑width CTAs; hero 3D element shrinks and moves under the text.
+
+Tablet: 2‑column where possible, navigation collapses to hamburger.
+
+Desktop: full layout as described with 3D hero and card grids.
+

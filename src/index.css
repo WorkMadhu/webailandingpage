@@ -1,18 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
   body {
-    @apply antialiased;
+    @apply antialiased bg-[#0F0F0F] text-white;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     font-feature-settings: "kern" 1;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-
-  body {
-    @apply bg-black;
   }
 }
 
@@ -20,25 +27,103 @@
   .text-balance {
     text-wrap: balance;
   }
+}
 
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
+@layer components {
+  .btn-primary {
+    @apply px-8 py-4 bg-[#00D9FF] text-black font-semibold rounded-lg transition-all duration-300;
   }
-
-  .animate-scroll {
-    animation: scroll 20s linear infinite;
+  
+  .btn-primary:hover {
+    @apply shadow-lg;
+    box-shadow: 0 0 30px rgba(0, 217, 255, 0.4);
   }
-
-  .animate-scroll:hover {
-    animation-play-state: paused;
+  
+  .btn-outline {
+    @apply px-8 py-4 border border-white/30 text-white font-semibold rounded-lg transition-all duration-300;
+  }
+  
+  .btn-outline:hover {
+    @apply bg-white/10 border-white/50;
+  }
+  
+  .card-feature {
+    @apply relative p-8 rounded-xl bg-[#0F0F0F] border border-[#1A1A2E] transition-all duration-500;
+  }
+  
+  .card-feature:hover {
+    @apply border-[#00D9FF]/30;
+    box-shadow: 0 0 30px rgba(0, 217, 255, 0.1);
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-[#00D9FF] via-[#0088FF] to-[#7C3AED] bg-clip-text text-transparent;
   }
 }
 
-html {
-  scroll-behavior: smooth;
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes rotate-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.animate-rotate-slow {
+  animation: rotate-slow 20s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-glow-pulse,
+  .animate-rotate-slow,
+  .animate-scroll {
+    animation: none;
+  }
 }
