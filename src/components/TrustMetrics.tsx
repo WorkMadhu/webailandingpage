@@ -18,7 +18,7 @@ const metrics = [
 
 export default function TrustMetrics() {
   return (
-    <section className="py-20 px-4 bg-[#0F0F0F]">
+    <section id="platform" className="py-20 px-4 bg-[#0F0F0F]">
       <div className="max-w-[1200px] mx-auto">
         <div className="grid md:grid-cols-3 gap-8">
           {metrics.map((metric, index) => (

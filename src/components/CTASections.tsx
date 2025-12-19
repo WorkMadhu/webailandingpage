@@ -2,7 +2,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function CTASections() {
   return (
-    <section id="resources" className="py-20 px-4 bg-gradient-to-b from-[#0F0F0F] via-[#1A1A2E]/30 to-[#0F0F0F]">
+    <section id="company" className="py-20 px-4 bg-gradient-to-b from-[#0F0F0F] via-[#1A1A2E]/30 to-[#0F0F0F]">
       <div className="max-w-[800px] mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
           Ready to <span className="text-[#00D9FF]">Automate</span>?
