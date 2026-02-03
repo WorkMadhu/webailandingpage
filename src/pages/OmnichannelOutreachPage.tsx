@@ -176,7 +176,7 @@ export default function OmnichannelOutreachPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-start gap-4 mb-12">
-            <a href="https://cal.com/anabless-dela-cruz-knutxw/consultation" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-600 text-white rounded-lg font-semibold hover:shadow-xl hover:shadow-cyan-500/50 hover:scale-105 transition-all flex items-center gap-2">
+            <a href="https://cal.com/tarunsai/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-600 text-white rounded-lg font-semibold hover:shadow-xl hover:shadow-cyan-500/50 hover:scale-105 transition-all flex items-center gap-2">
               Get Started Today
               <ArrowRight size={20} />
             </a>
@@ -556,7 +556,7 @@ export default function OmnichannelOutreachPage() {
                 </ul>
 
                 <a
-                  href="https://cal.com/anabless-dela-cruz-knutxw/consultation"
+                  href="https://cal.com/tarunsai/30min?overlayCalendar=true"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`w-full py-3 rounded-lg font-semibold transition-all text-sm flex items-center justify-center ${
@@ -586,7 +586,7 @@ export default function OmnichannelOutreachPage() {
             Join sales teams achieving 72% open rates and 36% reply rates
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://cal.com/anabless-dela-cruz-knutxw/consultation" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-primary-100 transition-all flex items-center gap-2">
+            <a href="https://cal.com/tarunsai/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-primary-100 transition-all flex items-center gap-2">
               Schedule Free Consultation
               <ArrowRight size={20} />
             </a>

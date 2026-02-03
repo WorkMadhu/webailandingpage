@@ -263,7 +263,7 @@ export default function CaseStudies() {
 
                   <div className="flex flex-col sm:flex-row items-center gap-4" style={{ transform: 'translateZ(20px)' }}>
                     <a
-                      href="https://cal.com/anabless-dela-cruz-knutxw/consultation"
+                      href="https://cal.com/tarunsai/30min?overlayCalendar=true"
                       target="_blank"
                       rel="noopener noreferrer"
                       className={`w-full sm:w-auto px-8 py-4 bg-gradient-to-r ${study.gradient} text-white font-bold text-lg rounded-2xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3 relative overflow-hidden group/btn`}

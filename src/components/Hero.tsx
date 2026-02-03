@@ -28,7 +28,7 @@ export default function Hero() {
 
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
               <a
-                href="https://cal.com/anabless-dela-cruz-knutxw/consultation"
+                href="https://cal.com/tarunsai/30min?overlayCalendar=true"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-8 py-4 bg-[#00D9FF] text-black rounded-lg font-semibold hover:shadow-lg transition-all flex items-center justify-center gap-2"
@@ -39,7 +39,7 @@ export default function Hero() {
                 <ArrowRight size={20} />
               </a>
               <a
-                href="https://cal.com/anabless-dela-cruz-knutxw/consultation"
+                href="https://cal.com/tarunsai/30min?overlayCalendar=true"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-8 py-4 border border-white/30 text-white rounded-lg font-semibold hover:bg-white/10 transition-all flex items-center justify-center"

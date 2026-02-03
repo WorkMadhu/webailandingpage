@@ -71,7 +71,7 @@ export default function Header() {
 
           <div className="hidden md:flex items-center">
             <a
-              href="https://cal.com/anabless-dela-cruz-knutxw/consultation"
+              href="https://cal.com/tarunsai/30min?overlayCalendar=true"
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-2.5 text-sm font-medium text-white border border-white/30 rounded-full hover:bg-white hover:text-black transition-all duration-300"
@@ -101,7 +101,7 @@ export default function Header() {
             <a href="#company" className="text-base text-[#CCCCCC] hover:text-white py-2">Company</a>
             <div className="pt-4 border-t border-[#1A1A2E]">
               <a
-                href="https://cal.com/anabless-dela-cruz-knutxw/consultation"
+                href="https://cal.com/tarunsai/30min?overlayCalendar=true"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full text-center px-5 py-3 text-sm font-medium text-white border border-white/30 rounded-full hover:bg-white hover:text-black transition-all"

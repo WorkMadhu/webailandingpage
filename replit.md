@@ -80,7 +80,7 @@ src/
 
 ### Third-Party Services
 - **Cal.com** - Booking/scheduling integration via embed script
-- All CTAs link to `cal.com/anabless-dela-cruz-knutxw/consultation`
+- All CTAs link to `cal.com/tarunsai/30min?overlayCalendar=true`
 
 ### Icon Library
 - **Lucide React** - Icon components used throughout the UI

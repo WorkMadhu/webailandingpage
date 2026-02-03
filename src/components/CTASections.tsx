@@ -13,7 +13,7 @@ export default function CTASections() {
         </p>
 
         <a
-          href="https://cal.com/anabless-dela-cruz-knutxw/consultation"
+          href="https://cal.com/tarunsai/30min?overlayCalendar=true"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-10 py-5 bg-[#00D9FF] text-black rounded-lg font-semibold text-lg hover:shadow-lg transition-all"

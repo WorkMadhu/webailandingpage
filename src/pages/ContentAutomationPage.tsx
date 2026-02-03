@@ -191,7 +191,7 @@ export default function ContentAutomationPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-start gap-4 mb-12">
-            <a href="https://cal.com/anabless-dela-cruz-knutxw/consultation" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-600 text-white rounded-lg font-semibold hover:shadow-xl hover:shadow-cyan-500/50 hover:scale-105 transition-all flex items-center gap-2">
+            <a href="https://cal.com/tarunsai/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-600 text-white rounded-lg font-semibold hover:shadow-xl hover:shadow-cyan-500/50 hover:scale-105 transition-all flex items-center gap-2">
               Get Started Today
               <ArrowRight size={20} />
             </a>
@@ -572,7 +572,7 @@ export default function ContentAutomationPage() {
                 </ul>
 
                 <a
-                  href="https://cal.com/anabless-dela-cruz-knutxw/consultation"
+                  href="https://cal.com/tarunsai/30min?overlayCalendar=true"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`w-full py-4 rounded-xl font-semibold text-base transition-all flex items-center justify-center ${
@@ -611,7 +611,7 @@ export default function ContentAutomationPage() {
             Stop wasting hours on retakes. Start building authority across 14+ platforms with just 15 minutes monthly.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://cal.com/anabless-dela-cruz-knutxw/consultation" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:shadow-xl hover:shadow-cyan-500/50 transition-all flex items-center gap-2">
+            <a href="https://cal.com/tarunsai/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:shadow-xl hover:shadow-cyan-500/50 transition-all flex items-center gap-2">
               Schedule Free Consultation
               <ArrowRight size={20} />
             </a>
